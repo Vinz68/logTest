@@ -1,32 +1,27 @@
 {
   "name": "logTest",
-  "version": "0.1.0",
-  "description": "just a test",
+  "version": "0.1.1",
+  "description": "Simple NodeJS starter app which includes logging and ..",
   "main": "logTest.js",
   "dependencies": {
     "bunyan": "^1.8.3",
     "express": "^4.14.0",
     "uuid-v4": "^0.1.0"
   },
-<<<<<<< HEAD
   "devDependencies": {
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "gulp-uglify": "^2.0.0"
   },
   "scripts": {
     "start": "node logTest.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "uglify": "gulp compress"
   },
-  "keywords": [],
-  "author": "Vincent van Beek",
-  "license": "MIT"
-=======
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Vinz68/logTest.git"
   },
   "keywords": [],
   "author": "Vincent van Beek",
-  "license": "ISC"
->>>>>>> 2c8bf19e6c3a4263ec2ed24b036bb4d214c70ae2
+  "license": "MIT"
 }
