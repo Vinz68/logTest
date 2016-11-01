@@ -19,9 +19,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Vinz68/logTest.git"
+    "url": "git+https://github.com/Vinz68/logTest.git"
   },
-  "keywords": [],
+  "keywords": [logTest],
   "author": "Vincent van Beek",
-  "license": "MIT"
+  "license": "MIT",
+  "bugs": {
+     "url": "https://github.com/Vinz68/logTest/issues"
+  },
+  "homepage": "https://github.com/Vinz68/logTest#ReadMe" 
 }
