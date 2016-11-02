@@ -21,7 +21,7 @@
     "type": "git",
     "url": "git+https://github.com/Vinz68/logTest.git"
   },
-  "keywords": [logTest],
+  "keywords": [],
   "author": "Vincent van Beek",
   "license": "MIT",
   "bugs": {

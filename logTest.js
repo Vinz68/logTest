@@ -30,7 +30,7 @@ var log = bunyan.createLogger({
 
 
 // static link the www-root folder to a 'html' directory (located in the users home directory)
-app.use('/', express.static('~./html'));
+app.use('/', express.static('/home/vincent/html'));
 log.info('www-root linked to folder /home/vincent.html');
 
 app.use(function (req, res, next) {
