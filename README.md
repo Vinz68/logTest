@@ -1,21 +1,25 @@
 # logTest
-is a minimal NodeJS app which can serve as a starting point for my next (and yours?) NodeJS project.
+is a minimal NodeJS app which will serve as a quick-start (template) for my next NodeJS projects.
 
-## Description [todo]
+## Description 
+Its goal is to build a minimal NodeJS application using best practises and available (free & frequently used) packages that meets the most often needed requirements.
+
 
 ## Requirements
-Its goal is to build a working application using available (free & frequently used) packages and best practises which fullfills the following requirements:
-- nodeJS backed, kind of microservice which can respond on a few (example) requests
+Best practises requirements:
+- the choosen modules/tools/solutions need to be free (as in no costs) and have support of an active community.
 - logging , 
-  - preferable to a rolling file (so automatic cleanup)
   - with "context" like module/function, date/time stamp, log levels (debug info,warn, error as minimum)
-  - logging output suitable for machine/script processing (for finding issues)
+  - support of configurable output (flat file, roling file, syslog, ..)
+  - for now we will implement/use a rolling file output (so automatic cleanup of log files)
+  - logging output suitable for filtering (and/or script processing for finding issues)
+- implement REST Webserivice
 - security
   - https
-  - authentication (TODO)
-- targets Linux (will be tested on Ubuntu and Raspbian (PI) )
-- the choosen modules/tools/solutions need to be free (as in no costs) and have support of an active community.
-- mechanism to start the app after boot
+  - authentication (OAUTH2 - TODO)
+- mechanism to start the app after boot (use PM2)
+- targets Unix/Linux (will be tested on Ubuntu and Raspbian PI )
+
 
 Not all of it will be implemented in the code; some aspects might need (free) third party tools and/or configuration settings.
 
@@ -27,6 +31,8 @@ Not all of it will be implemented in the code; some aspects might need (free) th
 - add one or more (test) modules, see how logging is implemented there / and how context is maintained from the original request
 - find a general purpose (so understanding might be easier).
 - add client which can consume the answer of the request(s) preferable a single page web-app (SPA; i think of an Angular2 app).
+
+
 
 
 
