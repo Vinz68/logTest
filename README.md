@@ -2,18 +2,28 @@
 is a minimal NodeJS app which will serve as a quick-start (template) for my next NodeJS projects.
 
 ## Description 
-Its goal is to build a minimal NodeJS application using best practises and available (free & frequently used) packages that meets the most often needed requirements.
+A NodeJS app is basically a lightweight webserver. The server side scripting is done in JavaScript (the 'js' part in NodeJS).
+The goal of this logTest project is to build a minimal NodeJS application using best practises and available (free & frequently used) packages that meets the most often needed requirements.
 
 
 ## Requirements
 Best practises requirements:
 - the choosen modules/tools/solutions need to be free (as in no costs) and have support of an active community.
+- use build tools 
+  - for automatic node restarts when source files are changes
+  - compress/uglify source files to distribution folder
+  - automatic unit testing
 - logging , 
   - with "context" like module/function, date/time stamp, log levels (debug info,warn, error as minimum)
   - support of configurable output (flat file, roling file, syslog, ..)
   - for now we will implement/use a rolling file output (so automatic cleanup of log files)
   - logging output suitable for filtering (and/or script processing for finding issues)
-- implement REST Webserivice
+- REST Webserivice API,
+  - we want to implement an API, so our webserver can give a response on a (web) request
+  - we will return our response in JSON format
+- storage,
+  - we need permanent storage in a database
+  - using the API we can save & read data from it.
 - security
   - https
   - authentication (OAUTH2 - TODO)
@@ -22,6 +32,28 @@ Best practises requirements:
 
 
 Not all of it will be implemented in the code; some aspects might need (free) third party tools and/or configuration settings.
+
+
+| Packages        | Requirement           | install        |
+|:---------------:| --------------------- | --------------:|
+| gulp | Build-Tool, install it so it can run from command line |  |
+|  | It can copy and uglify/compress source files | npm install gulp -g |
+|  | to the destination/production folder |  |
+|  | |  |
+| gulp-nodemon | Build-Tool, detect source file changes | npm install gulp-nodemon --save |
+|  | |  |
+| bunyan | Logging | npm install bunyan --save |
+|  | |  |
+| express | REST API | npm install express --save |
+|  | |  |
+| mongoDB | Storage | www.mongodb.org (download & install) |
+|  | |  |
+| mongoose | Storage framework / using JSON to access the mongoDB | npm install mongoose --save |
+|  | |  |
+| body-parser | make json objects available in req.body | npm install body-parser --save |
+|  | |  |
+
+
 
  
 ## TODO List:

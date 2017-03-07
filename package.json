@@ -1,15 +1,17 @@
 {
   "name": "logTest",
-  "version": "0.1.1",
-  "description": "Simple NodeJS starter app which includes logging and ..",
+  "version": "0.1.2",
+  "description": "Simple NodeJS starter app which includes database access (mongodb), logging (bunyan), REST-API and more..",
   "main": "logTest.js",
   "dependencies": {
     "bunyan": "^1.8.3",
     "express": "^4.14.0",
+    "mongoose": "^4.8.6",
     "uuid-v4": "^0.1.0"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
+    "gulp-nodemon": "^2.2.1",
     "gulp-uglify": "^2.0.0"
   },
   "scripts": {
@@ -25,7 +27,7 @@
   "author": "Vincent van Beek",
   "license": "MIT",
   "bugs": {
-     "url": "https://github.com/Vinz68/logTest/issues"
+    "url": "https://github.com/Vinz68/logTest/issues"
   },
-  "homepage": "https://github.com/Vinz68/logTest#ReadMe" 
+  "homepage": "https://github.com/Vinz68/logTest#ReadMe"
 }
