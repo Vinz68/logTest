@@ -27,7 +27,7 @@ Best practises requirements:
 - security
   - https
   - authentication (OAUTH2 - TODO)
-- mechanism to start the app after boot (use PM2)
+- mechanism to start the app after boot (we will use [PM2](http://pm2.keymetrics.io/))
 - targets Unix/Linux (will be tested on Ubuntu and Raspbian PI )
 
 

@@ -17,9 +17,9 @@ var routes = function(Book){
             var book = new Book(req.body);
             book.save();
 
-            req.log.info({res: res}, "responded on post request");
-
             res.status(201).send(book);  // 201 = status created, since new book has been created in the MongoDB
+
+            req.log.info({res: res}, "responded on post request");
         })
         .get(function(req,res){
             req.log.info({req: req}, "received get request");
@@ -28,13 +28,14 @@ var routes = function(Book){
             
             Book.find(query, function(err,books){
                 if(err) {
-                    req.log.error("/api/Books/ : Something went wrong. Error:", err);
-                    res.status(500).send(err);                
+                    req.log.error("/api/books/ : Something went wrong. Error:", err);
+                    res.status(500).send(err); 
+                    req.log.info({res: res}, "responded on get request");                                     
                 }
                 else
                 {
-                    req.log.info({res: res}, "responded on get request");
                     res.json(books);
+                    req.log.info({res: res}, "responded on get request");                    
                 }
             });
         });
@@ -42,17 +43,18 @@ var routes = function(Book){
 
     bookRouter.route('/:bookId')
         .get(function(req,res){
-            req.log.info({req: req}, "received request");
+            req.log.info({req: req}, "received request with a bookId");
             
             Book.findById(req.params.bookId, function(err,book){
                 if(err) {
-                    req.log.error("/api/Books/ : Something went wrong. Error:", err);
-                    res.status(500).send(err);                
+                    req.log.error("/api/books/ : Something went wrong. Error:", err);
+                    res.status(500).send(err);  
+                    req.log.info({res: res}, "responded on request with a bookId");                                  
                 }
                 else
                 {
-                    req.log.info({res: res}, "responded");
                     res.json(book);
+                    req.log.info({res: res}, "responded on request with a bookId");
                 }
             });
         });
