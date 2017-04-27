@@ -54,6 +54,18 @@ Not all of it will be implemented in the code; some aspects might need (free) th
 |  | |  |
 
 
+## Installation notes
+1. fork this package in github and 
+2. clone it to your ubuntu server 
+git clone https://github.com/[your-account-name-here]/logTest.git
+3. install its dependencies 
+npm istall
+4. install mongoDB 
+5. run script "fillDb.sh" to add rows in the database
+6. run the program
+node logTest.js
+7. open a web browser on:  http://your-ip/books
+
 
  
 ## TODO List:
