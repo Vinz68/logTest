@@ -65,7 +65,7 @@ git clone https://github.com/[your-account-name-here]/logTest.git
 npm install
 ```
 4. install mongoDB (see www.mongodb.org)
-5. add rows in the database (see [./models/setupDB/README.md](https://github.com/Vinz68/logTest/blob/master/models/setupDB/README.md))
+5. add rows in the database (see [setupDB README.md](https://github.com/Vinz68/logTest/blob/master/models/setupDB/))
 6. run the program
 ```
 node logTest.js
