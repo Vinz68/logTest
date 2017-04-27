@@ -4,6 +4,7 @@
   "description": "Simple NodeJS starter app which includes database access (mongodb), logging (bunyan), REST-API and more..",
   "main": "logTest.js",
   "dependencies": {
+    "body-parser": "^1.17.1",
     "bunyan": "^1.8.3",
     "express": "^4.14.0",
     "mongoose": "^4.8.6",
