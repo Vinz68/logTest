@@ -13,8 +13,8 @@ var PORT = process.env.PORT || 3000;        // Node will listen on port from env
 
 var app = express();                        // W're using Express
 
-
 var uuid = require("uuid-v4");              // Module for generating and validation V4 UUIDs. https://www.npmjs.com/package/uuid-v4
+
 var bunyan = require("bunyan");             // Bunyan is a simple and fast JSON logging library. https://github.com/trentm/node-bunyan
 var log = bunyan.createLogger({
     name: APPNAME,                          // use the application name
@@ -33,6 +33,7 @@ var log = bunyan.createLogger({
 });
 
 
+// Connect with database 'bookAPI' on MongoDB 
 var db = mongoose.connect('mongodb://localhost/bookAPI'); // use local database named: 'bookAPI'
 var Book = require('./models/bookModel');                 // our 'book' record structure
 
@@ -41,11 +42,12 @@ app.use(bodyParser.json());                 // find json object (in url) and mak
 
 
 // static link the www-root folder to a 'html' directory (located in the users home directory)
-app.use('/', express.static('/home/vincent/html'));
+app.use('/', express.static('/home/vincent/html'));       // use your own user / home directory here !
 log.info('www-root linked to folder /home/vincent.html');
 
+
+// CORS: Allow cross-domain requests (blocked by default)
 app.use(function (req, res, next) {
-    // CORS: Allow cross-domain requests (blocked by default)
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
 
@@ -59,9 +61,11 @@ app.use(function (req, res, next) {
 });
 
 
+// use domain-name/api/books as main end point for "books"
 var bookRouter = require('./routes/bookRoutes')(Book);
 app.use('/api/books', bookRouter);
 //app.use('/api/authors', authorRouter);
+
 
 app.get("/news", function (req, res) {
     try {
@@ -78,8 +82,8 @@ app.get("/news", function (req, res) {
 });
 
 
+// Start web-server and Log that we have started and accept incomming connections on the configured port/
 app.listen(PORT, function () {
-    // Log that we have started and accept incomming connections on the configured port/
     log.info(APPNAME + " is ready and listening on port: " + PORT);
     console.log(APPNAME + " is ready and listening on port: " + PORT);
 });
