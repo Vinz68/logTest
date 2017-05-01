@@ -1,7 +1,7 @@
 /* --------------------------------------------------------------------------------------------------
    logTest - logging example.
    - using bunyan as logging framework
-   2017-03-06 Vincent van Beek
+   2017-05-01 Vincent van Beek
 ----------------------------------------------------------------------------------------------------- */
 "use strict";
 var express = require("express");           // Express web application framework. http://expressjs.com/
@@ -9,7 +9,7 @@ var mongoose = require("mongoose");         // Framework to access MongoDB (Data
 var bodyParser = require("body-parser");    // Parse incoming request bodies in a middleware before your handlers, available under the req.body property. See https://github.com/expressjs/body-parser
 
 var APPNAME = "logTest";                    // Name of this app used here and there
-var PORT = process.env.PORT || 3000;        // Node will listen on port from environment setting, or when not set to port number...
+var PORT = process.env.PORT || 8088;        // Node will listen on port from environment setting, or when not set to port number...
 
 var app = express();                        // W're using Express
 

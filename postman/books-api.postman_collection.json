@@ -1,0 +1,131 @@
+{
+	"variables": [],
+	"info": {
+		"name": "books-api",
+		"_postman_id": "ca34e7d1-401f-d327-4844-1c9d35a37588",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "load all books",
+			"request": {
+				"url": "https://vibesoft.eu/api/books",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Vincent\"\r\n}\r\n"
+				},
+				"description": "List all books (MongoDB)"
+			},
+			"response": []
+		},
+		{
+			"name": "load book by ID",
+			"request": {
+				"url": "https://vibesoft.eu/api/books/59078df9f8ef6c08e12f4ed0",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"title\": \"My 2nd book about postman\",\n  \"genre\": \"Programming\",\n  \"author\": \"VibeSoft\"\n}"
+				},
+				"description": "One books (MongoDB)"
+			},
+			"response": []
+		},
+		{
+			"name": "Save new book",
+			"request": {
+				"url": "https://vibesoft.eu/api/books/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"title\": \"My 3rd book about postman\",\n  \"genre\": \"Programming\",\n  \"author\": \"VibeSoft\",\n  \"read\": false\n}"
+				},
+				"description": "Post one (new) books (MongoDB)"
+			},
+			"response": []
+		},
+		{
+			"name": "Update book",
+			"request": {
+				"url": "https://vibesoft.eu/api/books/59078df9f8ef6c08e12f4ed0",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\n    \"title\": \"My 2nd book about postman\",\n    \"genre\": \"Programming\",\n    \"author\": \"VibeSoft\",\n    \"read\": false\n  }"
+				},
+				"description": "Update (put) a book"
+			},
+			"response": []
+		},
+		{
+			"name": "Patch book (one or more fields updates)",
+			"request": {
+				"url": "https://vibesoft.eu/api/books/59078df9f8ef6c08e12f4ed0",
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"read\": true\n}"
+				},
+				"description": "Patch book (one or more fields updates)"
+			},
+			"response": []
+		},
+		{
+			"name": "delete one book",
+			"request": {
+				"url": "https://vibesoft.eu/api/books/590788b1f8ef6c08e12f4ecf",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Vincent\"\r\n}\r\n"
+				},
+				"description": "delete one book (MongoDB)"
+			},
+			"response": []
+		}
+	]
+}
