@@ -37,10 +37,10 @@ Not all of it will be implemented in the code; some aspects might need (free) th
 | Packages        | Requirement           | install        |
 |:---------------:| --------------------- | --------------:|
 | gulp | Build-Tool, install it so it can run from command line |  |
-|  | It can copy and uglify/compress source files | npm install gulp -g |
+|  | It can copy and uglify/compress source files | sudo npm install gulp -g |
 |  | to the destination/production folder |  |
 |  | |  |
-| gulp-nodemon | Build-Tool, detect source file changes | npm install gulp-nodemon --save |
+| gulp-nodemon | Build-Tool, detect source file changes | sudo npm install gulp-nodemon --save-dev |
 |  | |  |
 | bunyan | Logging | npm install bunyan --save |
 |  | |  |
@@ -64,11 +64,15 @@ git clone https://github.com/[your-account-name-here]/logTest.git
 ```
 npm install
 ```
+NOTE: Use npm install --only=production to install only dependencies, and not devDependencies,regardless of the value of the NODE_ENV environment variable.
+
 4. install mongoDB (see www.mongodb.org)
-5. add rows in the database (see [setupDB README.md](https://github.com/Vinz68/logTest/blob/master/models/setupDB/))
+5. add test data in the mongoDB database (see setupDB/README.md](https://github.com/Vinz68/logTest/blob/master/models/setupDB/))
 6. run the program
 ```
 node logTest.js
+or
+gulp
 ```
 
 7. open a web browser on:  http://your-ip/books

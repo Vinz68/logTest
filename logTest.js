@@ -4,7 +4,6 @@
    2017-03-06 Vincent van Beek
 ----------------------------------------------------------------------------------------------------- */
 "use strict";
-
 var express = require("express");           // Express web application framework. http://expressjs.com/
 var mongoose = require("mongoose");         // Framework to access MongoDB (Database) using JSON syntax.
 var bodyParser = require("body-parser");    // Parse incoming request bodies in a middleware before your handlers, available under the req.body property. See https://github.com/expressjs/body-parser
@@ -14,7 +13,7 @@ var PORT = process.env.PORT || 8088;        // Node will listen on port from env
 
 var app = express();                        // W're using Express
 
-// Setup the rolling file logger.
+
 var uuid = require("uuid-v4");              // Module for generating and validation V4 UUIDs. https://www.npmjs.com/package/uuid-v4
 var bunyan = require("bunyan");             // Bunyan is a simple and fast JSON logging library. https://github.com/trentm/node-bunyan
 var log = bunyan.createLogger({
@@ -34,12 +33,10 @@ var log = bunyan.createLogger({
 });
 
 
-// Connect to the 'bookAPI' MongoDB database, and use the book (json) objects. 
 var db = mongoose.connect('mongodb://localhost/bookAPI'); // use local database named: 'bookAPI'
 var Book = require('./models/bookModel');                 // our 'book' record structure
 
-// Use body-parser for the POST of "book"-json objects
-app.use(bodyParser.urlencoded({extended:true}));          
+app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());                 // find json object (in url) and make available in req.body
 
 
@@ -69,7 +66,7 @@ app.use('/api/books', bookRouter);
 app.get("/news", function (req, res) {
     try {
         req.log.info("NEWS");
-        req.log.info({req: req}, "received news-request");
+        req.log.info({req: req}, "received request");
         res.writeHead(200, {"Content-Type": "text/html"});
         res.write("<p>No news Today</p><br>");
         res.end();
@@ -77,7 +74,7 @@ app.get("/news", function (req, res) {
         req.log.error("/news/ : Something went wrong....", err);
         res.status(503, "Something went wrong: " + err).end();
     }
-    req.log.info({res: res}, "responded on news-request");
+    req.log.info({res: res}, "responded");
 });
 
 

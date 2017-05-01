@@ -8,7 +8,7 @@ var express = require('express');
 
 var routes = function(Book){
 
-    var bookRouter = express.Router();          // Setup a router for the /api/book REST API
+    var bookRouter = express.Router();   // Setup a router for the /api/book REST API
 
     bookRouter.route('/')
         .post(function(req,res){
@@ -25,17 +25,17 @@ var routes = function(Book){
             req.log.info({req: req}, "received get request");
 
             var query = req.query;
-            
+
             Book.find(query, function(err,books){
                 if(err) {
                     req.log.error("/api/books/ : Something went wrong. Error:", err);
-                    res.status(500).send(err); 
-                    req.log.info({res: res}, "responded on get request");                                     
+                    res.status(500).send(err);
+                    req.log.info({res: res}, "responded on get request");
                 }
                 else
                 {
                     res.json(books);
-                    req.log.info({res: res}, "responded on get request");                    
+                    req.log.info({res: res}, "responded on get request");
                 }
             });
         });
@@ -44,12 +44,12 @@ var routes = function(Book){
     bookRouter.route('/:bookId')
         .get(function(req,res){
             req.log.info({req: req}, "received request with a bookId");
-            
+
             Book.findById(req.params.bookId, function(err,book){
                 if(err) {
                     req.log.error("/api/books/ : Something went wrong. Error:", err);
-                    res.status(500).send(err);  
-                    req.log.info({res: res}, "responded on request with a bookId");                                  
+                    res.status(500).send(err);
+                    req.log.info({res: res}, "responded on request with a bookId");
                 }
                 else
                 {
@@ -60,7 +60,7 @@ var routes = function(Book){
         });
 
 
-    return bookRouter;    
+    return bookRouter;
 };
 
 module.exports = routes;
