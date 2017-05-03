@@ -1,7 +1,7 @@
 /* --------------------------------------------------------------------------------------------------
    logTest - logging example.
    - using bunyan as logging framework
-   2017-05-01 Vincent van Beek
+   2017-05-03 Vincent van Beek
 ----------------------------------------------------------------------------------------------------- */
 "use strict";
 var express = require("express");           // Express web application framework. http://expressjs.com/
@@ -33,7 +33,7 @@ var log = bunyan.createLogger({
 });
 
 
-// Connect with database 'bookAPI' on MongoDB 
+// Connect with database 'bookAPI' on MongoDB
 var db = mongoose.connect('mongodb://localhost/bookAPI'); // use local database named: 'bookAPI'
 var Book = require('./models/bookModel');                 // our 'book' record structure
 
@@ -87,3 +87,4 @@ app.listen(PORT, function () {
     log.info(APPNAME + " is ready and listening on port: " + PORT);
     console.log(APPNAME + " is ready and listening on port: " + PORT);
 });
+
