@@ -1,6 +1,6 @@
 /* --------------------------------------------------------------------------------------------------
    bookRoutes.js - Read and Create 'Book' objects from/into a MongoDB Database, using GET and POST
-   2017-03-07 Vincent van Beek
+   2017-05-01 Vincent van Beek
 ----------------------------------------------------------------------------------------------------- */
 "use strict";
 
@@ -87,11 +87,11 @@ var routes = function(Book){
                 else{
                     res.json(req.book);  // return the updated book
                     req.log.info({res: res}, "responded on put request (returned the updated book)");
-                }    
+                }
             });
         })
         .patch(function(req,res){
-            req.log.info({req: req}, "received patch request and book has been found");            
+            req.log.info({req: req}, "received patch request and book has been found");
 
             if(req.body._id)
                 delete req.body._id;
@@ -110,7 +110,7 @@ var routes = function(Book){
                 else{
                     res.json(req.book);  // return the updated book
                     req.log.info({res: res}, "responded on patch request (returned the updated book)");
-                }    
+                }
             });
         })
         .delete(function(req,res){
@@ -123,7 +123,7 @@ var routes = function(Book){
                 }
                 else{
                     res.status(204).send('successfully removed');
-                    req.log.info({res: res}, "responded on delete request (successfully removed)");                    
+                    req.log.info({res: res}, "responded on delete request (successfully removed)");
                 }
             });
          });
@@ -133,3 +133,4 @@ var routes = function(Book){
 };
 
 module.exports = routes;
+
