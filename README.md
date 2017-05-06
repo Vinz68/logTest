@@ -54,8 +54,8 @@ Not all of it will be implemented in the code; some aspects might need (free) th
 
 
 ## Installation notes
-1. fork this package in github
-2. clone it to your server 
+1. fork this package to your github account
+2. clone it from github to your server 
 ``` bash
 git clone https://github.com/[your-account-name-here]/logTest.git
 ```
