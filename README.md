@@ -1,5 +1,6 @@
-![Alt text](umages/logTestImg.png?raw=true "logTest")
+![Alt text](images/logTestImg.png?raw=true "logTest")
 # logTest
+![Alt text](blob/master/images/logTestImg.png?raw=true "logTest")
 is a minimal NodeJS app which will serve as a quick-start (template) for my next NodeJS projects.
 
 ## Description 
