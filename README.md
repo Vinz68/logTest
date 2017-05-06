@@ -1,13 +1,19 @@
-:-------------------------:|:-------------------------:
-!<img src="https://raw.githubusercontent.com/Vinz68/logTest/master/images/logTestImg.png" width="150"> | ## logTest
-is a minimal NodeJS app which will serve as a quick-start (template) for my next NodeJS projects)!
 
-## Description 
+First Header  | Second Header
+------------- | -------------
+<img src="https://raw.githubusercontent.com/Vinz68/logTest/master/images/logTestImg.png" width="150"> | ## logTest ##
+is a minimal NodeJS app which will serve as a quick-start (template) for my next NodeJS projects
+
+
+<img src="https://raw.githubusercontent.com/Vinz68/logTest/master/images/logTestImg.png" width="150"> | ## logTest ##
+is a minimal NodeJS app which will serve as a quick-start (template) for my next NodeJS projects)
+
+## Description ##
 A NodeJS app is basically a lightweight webserver. The server side scripting is done in JavaScript (the 'js' part in NodeJS).
 
 The goal of this logTest project is to build a minimal NodeJS application using best practises and available (free & frequently used) packages that meets the most often needed requirements.
 
-## Requirements
+## Requirements ##
 Best practises requirements:
 - the choosen modules/tools/solutions need to be free (as in no costs) and have support of an active community.
 - use build tools 
