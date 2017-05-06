@@ -1,13 +1,9 @@
 <img src="https://raw.githubusercontent.com/Vinz68/logTest/master/images/logTestImg.png" width="250"></img> 
 ## logTest 
-is a minimal NodeJS app which will serve as a quick-start (template) for my next NodeJS projects.
-
-It includes logging (bunyan) a database (mongoDB) and a REST Webservice API (express).
+is a minimal NodeJS app which will serve as a quick-start (template) for my next NodeJS projects. It includes logging (bunyan) a database (mongoDB) and a REST Webservice API (express).
 
 
-## Description
-A NodeJS app is basically a lightweight webserver. The server side scripting is done in JavaScript (the 'js' part in NodeJS).
-
+## Purpose 
 The goal of this logTest project is to build a minimal NodeJS application using best practises and available (free & frequently used) packages that meets the most often needed requirements.
 
 ## Requirements
@@ -83,8 +79,14 @@ gulp
 
  
 ## TODO List:
-- include code quality check (JSLint or something else) ?
-- add athentication using OAUTH2
+ Markup : - [ ] include code quality check (JSLint or something else..) 
+          - [ ] add athentication using OAUTH2          
+          - [x] include deployment script (use grunt/gulp ?)
+          - [ ] add one or more (test) modules
+          - [ ] add client which can consume the answer of the request(s) preferable a single page web-app (SPA; i think of an Angular2 app).
+          - [x] add choice of storage (MongoDB or Azure DocumentDB)          
+- 
+- 
 - include deployment script (use grunt/gulp ?)
 - add one or more (test) modules, see how logging is implemented there / and how context is maintained from the original request
 - find a general purpose (so understanding might be easier).
