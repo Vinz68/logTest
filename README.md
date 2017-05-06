@@ -20,7 +20,7 @@ Best practises requirements:
   - logging output suitable for filtering (and/or script processing for finding issues)
 - REST Webserivice API,
   - we want to implement an API, so our webserver can give a response on a (web) request
-  - we will return our response in JSON format
+   - we will return our response in JSON format
 - storage,
   - we need permanent storage in a database
   - using the API we can save & read data from it.
@@ -31,7 +31,6 @@ Best practises requirements:
 
 
 Not all of it will be implemented in the code; some aspects might need (free) third party tools and/or configuration settings.
-
 
 | Packages        | Requirement           | install        |
 |:---------------:| --------------------- | --------------:|
@@ -83,7 +82,7 @@ gulp
  - [x] include deployment script (use grunt/gulp ?)
  - [ ] add one or more (test) modules
  - [ ] add client which can consume the answer of the request(s) preferable a single page web-app (SPA; i think of an Angular2 app).
- - [x] add choice of storage (MongoDB or Azure DocumentDB)          
+ - [ ] add choice of storage (MongoDB or Azure DocumentDB)          
 
 
 ![Alt text](images/logTestImg.png?raw=true "logTest")
