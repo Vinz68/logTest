@@ -1,6 +1,6 @@
 ![Alt text](images/logTestImg.png?raw=true "logTest")
 # logTest
-![Alt text](blob/master/images/logTestImg.png?raw=true "logTest")
+<img src="https://raw.githubusercontent.com/Vinz68/logTest/master/images/logTestImg.png" width="60">
 is a minimal NodeJS app which will serve as a quick-start (template) for my next NodeJS projects.
 
 ## Description 
