@@ -37,7 +37,7 @@ Not all of it will be implemented in the code; some aspects might need (free) th
 | gulp | Build-Tool, install it so it can run from command line |  |
 |  | It can copy and uglify/compress source files | sudo npm install gulp -g ||  | to the destination/production folder |  |
 |  | |  |
-| gulp-nodemon | Build-Tool, detect source file changes | sudo npm install gulp-nodemon --save-dev |
+ | gulp-nodemon | Build-Tool, detect source file changes | sudo npm install gulp-nodemon --save-dev |
 |  | |  |
 | bunyan | Logging | npm install bunyan --save |
 |  | |  |
@@ -79,7 +79,7 @@ http://your-ip/api/books
 ```
 
 
-##Contribute
+## Contribute
 
 Report a bug or a suggestion by posting an issue on the git repository (https://github.com/Vinz68/logTest/issues).
 
