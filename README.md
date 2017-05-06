@@ -30,7 +30,7 @@ Best practises requirements:
 
 
 Not all of it will be implemented in the code; some aspects might need (free) third party tools and/or configuration settings.
-a
+
 | Packages        | Requirement           | install        |
 |:---------------:| --------------------- | --------------:|
 | gulp | Build-Tool, install it so it can run from command line |  |
