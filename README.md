@@ -1,3 +1,15 @@
+| ------------- | ------------- |
+| <img src="https://raw.githubusercontent.com/Vinz68/logTest/master/images/logTestImg.png" width="250"></img>   | ## logTest 
+is a minimal NodeJS app which will serve as a quick-start (template) for my next NodeJS projects.
+
+It includes logging (bunyan) a database (mongoDB) and a REST Webservice API (express).  |
+
+
+
+
+
+
+
 <img src="https://raw.githubusercontent.com/Vinz68/logTest/master/images/logTestImg.png" width="250"></img> 
 ## logTest 
 is a minimal NodeJS app which will serve as a quick-start (template) for my next NodeJS projects.
