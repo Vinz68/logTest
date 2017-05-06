@@ -1,8 +1,5 @@
-
-First Header  | Second Header
 ------------- | -------------
-<img src="https://raw.githubusercontent.com/Vinz68/logTest/master/images/logTestImg.png" width="150"> | ## logTest ##
-is a minimal NodeJS app which will serve as a quick-start (template) for my next NodeJS projects
+<img src="https://raw.githubusercontent.com/Vinz68/logTest/master/images/logTestImg.png" width="150"> | ## logTest ## is a minimal NodeJS app which will serve as a quick-start (template) for my next NodeJS projects
 
 
 <img src="https://raw.githubusercontent.com/Vinz68/logTest/master/images/logTestImg.png" width="150"> | ## logTest ##
