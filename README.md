@@ -1,12 +1,12 @@
 
 
 
-Here is an inline ![smiley](smiley.png){:height="36px" width="36px"}.
+## logTest 
+is a minimal NodeJS app which will serve as a quick-start (template) for my next NodeJS projects. ![smiley](master/images/logTestImg.png){:height="200px" width="100px"}.
 
 And here is a referenced ![smile]
 
-[smile]: smile.png
-{: height="36px" width="36px"}![alt text](https://raw.githubusercontent.com/Vinz68/logTest/master/images/logTestImg.png "## logTest ## 
+{: height="36px" width="36px"}![alt textt(https://raw.githubusercontent.com/Vinz68/logTest/master/images/logTestImg.png "## logTest ## 
 is a minimal NodeJS app which will serve as a quick-start (template) for my next NodeJS projects.")
 
 
@@ -14,18 +14,18 @@ is a minimal NodeJS app which will serve as a quick-start (template) for my next
 <img src="https://raw.githubusercontent.com/Vinz68/logTest/master/images/logTestImg.png" width="250"> 
 
 
-## logTest ## 
+## logTest 
 is a minimal NodeJS app which will serve as a quick-start (template) for my next NodeJS projects.
 
 It includes logging (bunyan) a database (mongoDB) and a REST Webservice API (express).
 
 
-## Description ##
+## Description
 A NodeJS app is basically a lightweight webserver. The server side scripting is done in JavaScript (the 'js' part in NodeJS).
 
 The goal of this logTest project is to build a minimal NodeJS application using best practises and available (free & frequently used) packages that meets the most often needed requirements.
 
-## Requirements ##
+## Requirements
 Best practises requirements:
 - the choosen modules/tools/solutions need to be free (as in no costs) and have support of an active community.
 - use build tools 
