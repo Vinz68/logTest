@@ -78,16 +78,23 @@ http://your-ip/api/books
 # see postman folder with GET, PUT, POST, DELETE and PATCH requests.
 ```
 
- 
-## TODO List:
- - [ ] include code quality check (JSLint or something else..) 
- - [ ] add athentication using OAUTH2          
- - [x] include deployment script (use grunt/gulp ?)
- - [ ] add one or more (test) modules
- - [ ] add client which can consume the answer of the request(s) preferable a single page web-app (SPA; i think of an Angular2 app).
- - [ ] add choice of storage (MongoDB or Azure DocumentDB)          
 
+##Contribute
+
+Report a bug or a suggestion by posting an issue on the git repository (https://github.com/Vinz68/logTest/issues).
 
 ![Alt text](images/logTestImg.png?raw=true "logTest")
+
+
+
+ 
+## TODO List:
+ - [ ] include code quality check (JSLint or something else..)     
+ - [x] include deployment script (use grunt/gulp ?)
+ - [ ] add one or more (test) modules
+ - [ ] add choice of storage (MongoDB or Azure DocumentDB) 
+ - [ ] add client which can consume the answer of the request(s) preferable a single page web-app (SPA; i think of an Angular2 app).
+ - [ ] add client athentication using OAUTH2 
+
 
 
