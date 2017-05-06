@@ -2,7 +2,7 @@
 
 
 ## logTest 
-is a minimal NodeJS app which will serve as a quick-start (template) for my next NodeJS projects. ![smiley](master/images/logTestImg.png){:height="200px" width="100px"}.
+is a minimal NodeJS app which will serve as a quick-start (template) for my next NodeJS projects. ![smiley](//raw.githubusercontent.com/Vinz68/logTest/master/images/logTestImg.png){:height="200px" width="100px"}.
 
 And here is a referenced ![smile]
 
