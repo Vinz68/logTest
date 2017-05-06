@@ -26,7 +26,7 @@ Best practises requirements:
   - using the API we can save & read data from it.
 - security
   - https
-- mechanism to start the app after boot (we will use [PM2](http://pm2.keymetrics.io/))
+ - mechanism to start the app after boot (we will use [PM2](http://pm2.keymetrics.io/))
 - targets Unix/Linux (will be tested on Ubuntu and Raspbian PI )
 
 
@@ -36,8 +36,7 @@ Not all of it will be implemented in the code; some aspects might need (free) th
 | Packages        | Requirement           | install        |
 |:---------------:| --------------------- | --------------:|
 | gulp | Build-Tool, install it so it can run from command line |  |
-|  | It can copy and uglify/compress source files | sudo npm install gulp -g |
-|  | to the destination/production folder |  |
+|  | It can copy and uglify/compress source files | sudo npm install gulp -g ||  | to the destination/production folder |  |
 |  | |  |
 | gulp-nodemon | Build-Tool, detect source file changes | sudo npm install gulp-nodemon --save-dev |
 |  | |  |
