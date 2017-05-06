@@ -3,8 +3,8 @@ is a minimal NodeJS app which will serve as a quick-start (template) for my next
 
 ## Description 
 A NodeJS app is basically a lightweight webserver. The server side scripting is done in JavaScript (the 'js' part in NodeJS).
-The goal of this logTest project is to build a minimal NodeJS application using best practises and available (free & frequently used) packages that meets the most often needed requirements.
 
+The goal of this logTest project is to build a minimal NodeJS application using best practises and available (free & frequently used) packages that meets the most often needed requirements.
 
 ## Requirements
 Best practises requirements:
@@ -26,7 +26,6 @@ Best practises requirements:
   - using the API we can save & read data from it.
 - security
   - https
-  - authentication (OAUTH2 - TODO)
 - mechanism to start the app after boot (we will use [PM2](http://pm2.keymetrics.io/))
 - targets Unix/Linux (will be tested on Ubuntu and Raspbian PI )
 
@@ -80,12 +79,13 @@ gulp
 
  
 ## TODO List:
-- make a decent Readme / guideline for this log example
 - include code quality check (JSLint or something else) ?
+- add athentication using OAUTH2
 - include deployment script (use grunt/gulp ?)
 - add one or more (test) modules, see how logging is implemented there / and how context is maintained from the original request
 - find a general purpose (so understanding might be easier).
 - add client which can consume the answer of the request(s) preferable a single page web-app (SPA; i think of an Angular2 app).
+- add choice of storage (MongoDB or Azure DocumentDB)
 
 
 
