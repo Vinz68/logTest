@@ -85,13 +85,6 @@ gulp
  - [ ] add one or more (test) modules
  - [ ] add client which can consume the answer of the request(s) preferable a single page web-app (SPA; i think of an Angular2 app).
  - [x] add choice of storage (MongoDB or Azure DocumentDB)          
-- 
-- 
-- include deployment script (use grunt/gulp ?)
-- add one or more (test) modules, see how logging is implemented there / and how context is maintained from the original request
-- find a general purpose (so understanding might be easier).
-- add client which can consume the answer of the request(s) preferable a single page web-app (SPA; i think of an Angular2 app).
-- add choice of storage (MongoDB or Azure DocumentDB)
 
 
 ![Alt text](images/logTestImg.png?raw=true "logTest")
