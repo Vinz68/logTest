@@ -2,7 +2,6 @@
 ## logTest 
 is a minimal NodeJS app which will serve as a quick-start (template) for my next NodeJS projects. It includes logging (bunyan) a database (mongoDB) and a REST Webservice API (express).
 
-
 ## Purpose 
 The goal of this logTest project is to build a minimal NodeJS application using best practises and available (free & frequently used) packages that meets the most often needed requirements.
 
@@ -11,27 +10,27 @@ Best practises requirements:
 - the choosen modules/tools/solutions need to be free (as in no costs) and have support of an active community.
 - use build tools 
   - for automatic node restarts when source files are changes
-  - compress/uglify source files to distribution folder
+i  - compress/uglify source files to distribution folder
   - automatic unit testing
 - logging , 
   - with "context" like module/function, date/time stamp, log levels (debug info,warn, error as minimum)
-  - support of configurable output (flat file, roling file, syslog, ..)
+o  - support of configurable output (flat file, roling file, syslog, ..)
   - for now we will implement/use a rolling file output (so automatic cleanup of log files)
   - logging output suitable for filtering (and/or script processing for finding issues)
 - REST Webserivice API,
   - we want to implement an API, so our webserver can give a response on a (web) request
    - we will return our response in JSON format
-- storage,
+p- storage,
   - we need permanent storage in a database
   - using the API we can save & read data from it.
 - security
-  - https
+p  - https
  - mechanism to start the app after boot (we will use [PM2](http://pm2.keymetrics.io/))
 - targets Unix/Linux (will be tested on Ubuntu and Raspbian PI )
 
 
 Not all of it will be implemented in the code; some aspects might need (free) third party tools and/or configuration settings.
-
+a
 | Packages        | Requirement           | install        |
 |:---------------:| --------------------- | --------------:|
 | gulp | Build-Tool, install it so it can run from command line |  |
@@ -72,8 +71,11 @@ or
 gulp
 ```
 
-7. open a web browser on:  http://your-ip/books
-
+7. open a web browser and test with:
+```
+http://your-ip/api/books
+# see postman folder with GET, PUT, POST, DELETE and PATCH requests.
+```
 
  
 ## TODO List:
