@@ -6,24 +6,25 @@ is a minimal NodeJS app which will serve as a quick-start (template) for my next
 The goal of this logTest project is to build a minimal NodeJS application using best practises and available (free & frequently used) packages that meets the most often needed requirements.
 
 ## Requirements
-Best practises requirements:
-- the choosen modules/tools/solutions need to be free (as in no costs) and have support of an active community.
-- use build tools 
-  - for automatic node restarts when source files are changes
-  - compress/uglify source files to distribution folder
-  - automatic unit testing
-- logging , 
+Best practises requirements, we want:
+- **open source**,
+  - the choosen modules/tools/solutions need to be free (as in no costs) and have support of an active community.
+- **logging**, 
   - with "context" like module/function, date/time stamp, log levels (debug info,warn, error as minimum)
   - support of configurable output (flat file, roling file, syslog, ..)
   - for now we will implement/use a rolling file output (so automatic cleanup of log files)
   - logging output suitable for filtering (and/or script processing for finding issues)
-- REST Webserivice API,
+- **REST Webserivice API**,
   - we want to implement an API, so our webserver can give a response on a (web) request
   - we will return our response in JSON format
- - storage,
+- **database storage**,
   - we need permanent storage in a database
   - using the API we can save & read data from it.
-- security
+- **use build tools** 
+  - for automatic node restarts when source files are changes
+  - compress/uglify source files to distribution folder
+  - automatic unit testing (todo)  
+- **security**
   - https
   - mechanism to start the app after boot (we will use [PM2](http://pm2.keymetrics.io/)) 
   - targets Unix/Linux (will be tested on Ubuntu and Raspbian PI )
