@@ -39,7 +39,7 @@ Not all of it will be implemented in the code; some aspects might need (free) th
 |  | |  |
  | gulp-nodemon | Build-Tool, detect source file changes | sudo npm install gulp-nodemon --save-dev |
 |  | |  |
-| bunyan | Logging | npm install bunyan --save |
+| [bunyan](https://github.com/trentm/node-bunyan) | Logging | npm install bunyan --save |
 |  | |  |
 | express | REST API | npm install express --save |
 |  | |  |
