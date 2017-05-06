@@ -1,4 +1,12 @@
-![alt text](https://raw.githubusercontent.com/Vinz68/logTest/master/images/logTestImg.png "## logTest ## 
+
+
+
+Here is an inline ![smiley](smiley.png){:height="36px" width="36px"}.
+
+And here is a referenced ![smile]
+
+[smile]: smile.png
+{: height="36px" width="36px"}![alt text](https://raw.githubusercontent.com/Vinz68/logTest/master/images/logTestImg.png "## logTest ## 
 is a minimal NodeJS app which will serve as a quick-start (template) for my next NodeJS projects.")
 
 
