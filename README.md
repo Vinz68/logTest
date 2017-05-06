@@ -1,4 +1,4 @@
-![Alt text](umages/logTest.png?raw=true "logTest")
+![Alt text](umages/logTestImg.png?raw=true "logTest")
 # logTest
 is a minimal NodeJS app which will serve as a quick-start (template) for my next NodeJS projects.
 
