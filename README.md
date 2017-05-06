@@ -1,19 +1,4 @@
-
-
-
-## logTest 
-is a minimal NodeJS app which will serve as a quick-start (template) for my next NodeJS projects. ![smiley](https://raw.githubusercontent.com/Vinz68/logTest/master/images/logTestImg.png){:height="200px" width="100px"}.
-
-And here is a referenced ![smile]
-
-{: height="36px" width="36px"}![alt textt(https://raw.githubusercontent.com/Vinz68/logTest/master/images/logTestImg.png "## logTest ## 
-is a minimal NodeJS app which will serve as a quick-start (template) for my next NodeJS projects.")
-
-
-
 <img src="https://raw.githubusercontent.com/Vinz68/logTest/master/images/logTestImg.png" width="250"> 
-
-
 ## logTest 
 is a minimal NodeJS app which will serve as a quick-start (template) for my next NodeJS projects.
 
