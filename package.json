@@ -1,6 +1,6 @@
 {
-  "name": "logTest",
-  "version": "0.1.2",
+  "name": "logtest",
+  "version": "0.1.3",
   "description": "Simple NodeJS starter app which includes database access (mongodb), logging (bunyan), REST-API and more..",
   "main": "logTest.js",
   "dependencies": {
