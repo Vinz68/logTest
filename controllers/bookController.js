@@ -11,10 +11,19 @@ var bookController = function(Book){
         //req.log.info({req: req}, "received post request");
 
         var book = new Book(req.body);
-        book.save();
 
-        res.status(201);  // 201 = status created since new book has been created in the MongoDB
-        res.send(book);   // and in the body we return the newly created book
+        if(!req.body.title){
+            res.status(400);
+            res.send('Error: Title is required when posting a new book!.')
+        }
+        else
+        {
+            book.save();
+
+            res.status(201);  // 201 = status created since new book has been created in the MongoDB
+            res.send(book);   // and in the body we return the newly created book
+        }
+    
 
         //req.log.info({res: res}, "responded on post request");
     }
