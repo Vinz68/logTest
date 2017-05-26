@@ -15,11 +15,12 @@ const agent = request.agent(app);
 
 describe('Book Crud Tests', function(){
     it('Should allow a book to be posted and return a read and _id', function(done){
-        var bookPost = {title:'new Book', authors:'Vincent', genre:'Fiction'};
+        var bookPost = { title: 'new Book', authors: 'Vincent', genre: 'Fiction' };
 
         agent
             .post('/api/books')
             .send(bookPost)
+            .set('Accept', 'application/json')
             .expect(201)
             .end(function(err, res){
 
