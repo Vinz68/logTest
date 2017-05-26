@@ -8,6 +8,7 @@
     "bunyan": "^1.8.3",
     "express": "^4.14.0",
     "mongoose": "^4.8.6",
+    "request": "^2.81.0",
     "uuid-v4": "^0.1.0"
   },
   "devDependencies": {

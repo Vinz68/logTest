@@ -87,5 +87,7 @@ app.listen(PORT, function () {
 });
 
 
-module.exports = app;
+// In order to reach the app from other modules
+// we need to export the express application
+module.exports.getApp = app;
 

@@ -6,16 +6,20 @@
 
 var should = require('should'),
     request = require('supertest'),
-    app = ('../logTest.js'),
     mongoose = require("mongoose"),
-    //Book = mongoose.model('Book')
-    Book = require('../models/bookModel').Book;   // our 'book' record structure
+    Book = require('../models/bookModel');   // our 'book' record structure
+
+// Here we get hold of the express application 
+// by using the exported 'getApp'-property
+var app = require("../logTest").getApp;
+
 
 const agent = request.agent(app);
 
+
 describe('Book Crud Tests', function(){
     it('Should allow a book to be posted and return a read and _id', function(done){
-        var bookPost = { title: 'new Book', authors: 'Vincent', genre: 'Fiction' };
+        var bookPost = { title: 'new Book', author: 'Vincent', genre: 'Fiction' };
 
         agent
             .post('/api/books')
@@ -40,3 +44,6 @@ describe('Book Crud Tests', function(){
         done();
     })
 })
+
+
+
