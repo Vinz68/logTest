@@ -67,10 +67,13 @@ NOTE: Use npm install --only=production to install only dependencies, and not de
 5. add test data in the mongoDB database (see setupDB/README.md](https://github.com/Vinz68/logTest/blob/master/models/setupDB/))
 6. run the program
 ```
-node logTest.js
-or
 gulp
 ```
+or
+```
+node logTest.js
+```
+
 
 7. open a web browser and test with:
 ```
