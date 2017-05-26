@@ -14,7 +14,7 @@ var bookController = function(Book){
 
         if(!req.body.title){
             res.status(400);
-            res.send('Error: Title is required when posting a new book!.')
+            res.send('Title is required.');
         }
         else
         {
@@ -24,7 +24,6 @@ var bookController = function(Book){
             res.send(book);   // and in the body we return the newly created book
         }
     
-
         //req.log.info({res: res}, "responded on post request");
     }
 
