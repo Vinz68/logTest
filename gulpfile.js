@@ -1,5 +1,5 @@
 var gulp = require('gulp');
-var nodemon = require('gulp-nodemon')
+var nodemon = require('gulp-nodemon');
 var uglify = require('gulp-uglify');
 var gulpMocha = require('gulp-mocha');
 
