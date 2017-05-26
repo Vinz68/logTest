@@ -9,8 +9,7 @@ var should = require('should'),
     request = require('supertest'),
     app = ('../logTest.js'),
     mongoose = require("mongoose"),
-    Book = mongoose.model('Book'),
-    //Book = require('../models/bookModel');   // our 'book' record structure
+    //Book = mongoose.model('Book'),
 
 describe('Book Crud Tests', function(){
     it('Should allow a book to be posted and return a read and _id', function(done){
