@@ -43,7 +43,18 @@ var routes = function(Book){
     bookRouter.route('/:bookId')
         .get(function(req,res){
             req.log.info({req: req}, "received get request and book has been found");
-            res.json(req.book);
+
+            // create an Json object from the book
+            var returnBook = req.book.toJSON();
+
+            // Add field: 'FilterByThisGenre' , which is a link to books of same genre
+            returnBook.links = {};
+            var newLink = 'http://' + req.headers.host + '/api/books/?genre=' + returnBook.genre;
+            returnBook.links.FilterByThisGenre = newLink.replace(' ', '%20');
+
+            // return the Json object (book with the 'FilterByThisGenre')
+            res.json(returnBook);
+
             req.log.info({res: res}, "responded on get request (book returned)");
         })
         .put(function(req,res){
