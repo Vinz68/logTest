@@ -51,6 +51,10 @@ Not all of it will be implemented in the code; some aspects might need (free) th
 |  | |  |
 | mocha | unit testing framework. gulp-mocha is the gulp plugin of mocha, should = assertion framework, sinon = mocking framework | npm install gulp-mocha should sinon --save-dev |
 |  | |  |
+| supertest | intergration tests with supertest | npm install supertest gulp-env --save-dev |
+|  | |  |
+
+
 
 
 

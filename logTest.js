@@ -37,7 +37,17 @@ var log = bunyan.createLogger({
 
 
 // Connect with database 'bookAPI' on MongoDB and use local database named: 'bookAPI'
-var db = mongoose.connect('mongodb://localhost/bookAPI'); 
+// (but for testing, [depending on environment variable setting] we will use bookAPI_test database)
+var db;
+
+if (process.env.ENV == 'Test')
+    db = mongoose.connect('mongodb://localhost/bookAPI_test');
+else{
+    db = mongoose.connect('mongodb://localhost/bookAPI');
+}
+
+
+ 
 var Book = require('./models/bookModel');   // our 'book' record structure
 
 app.use(bodyParser.urlencoded({extended:true}));
@@ -77,4 +87,7 @@ app.listen(PORT, function () {
     log.info(APPNAME + " is ready and listening on port: " + PORT);
     console.log(APPNAME + " is ready and listening on port: " + PORT);
 });
+
+
+module.exports = app;
 
