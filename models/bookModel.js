@@ -4,9 +4,10 @@
 ----------------------------------------------------------------------------------------------------- */
 "use strict";
 
-var mongoose = require('mongoose'),
-    Schema = mongoose.Schema;
+var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
 
+// Create a schema
 var bookModel = new Schema({
     title: {type: String},
     author: {type: String},
@@ -14,4 +15,11 @@ var bookModel = new Schema({
     read: {type: Boolean, default:false}
 });
 
-module.exports= mongoose.model('Book', bookModel);
+//module.exports= mongoose.model('Book', bookModel);
+
+// the schema is useless so far
+// we need to create a model using it
+var Book = mongoose.model('Book', bookModel);
+
+// make this available in our Node applications
+module.exports = Book;
