@@ -24,7 +24,7 @@ describe('Book Controller Tests:', function(){
                 send: sinon.spy()
             }
 
-            var bookController = require('../controllers/bookContoller')(Book);
+            var bookController = require('../controllers/bookController.js')(Book)
             bookController.post(req,res);
 
             res.status.calledWith(400).should.equal(true, 'Bad Status '+ res.status.args[0][0]);
