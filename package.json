@@ -7,7 +7,10 @@
     "body-parser": "^1.17.1",
     "bunyan": "^1.8.3",
     "express": "^4.14.0",
+    "gulp-mocha": "^4.3.1",
     "mongoose": "^4.8.6",
+    "should": "^11.2.1",
+    "sinon": "^2.3.1",
     "uuid-v4": "^0.1.0"
   },
   "devDependencies": {
