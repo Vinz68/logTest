@@ -5,20 +5,22 @@
 "use strict";
 
 var should = require('should'),
+    //express = require('express'),
     request = require('supertest'),
     app = ('../logTest.js'),
     mongoose = require("mongoose"),
-    //Book = mongoose.model('Book'),
-    Book = require('../models/bookModel');   // our 'book' record structure
+    Book = mongoose.model('Book'),
+    //Book = require('../models/bookModel');   // our 'book' record structure
     agent = request.agent(app); 
 
 describe('Book Crud Tests', function(){
     it('Should allow a book to be posted and return a read and _id', function(done){
         var bookPost = {title:'new Book', authors:'Vincent', genre:'Fiction'};
 
-        agent.post('/api/books')
+        request(app)
+            .post('/api/books')
             .send(bookPost)
-            .expect(200)
+            .expect(201)
             .end(function(err, results){
                 results.body.read.should.equal(false);
                 results.body.should.have.property('_id');
