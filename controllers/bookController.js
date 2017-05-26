@@ -5,7 +5,6 @@
 ----------------------------------------------------------------------------------------------------- */
 "use strict";
 
-
 var bookController = function(Book){
 
     var post = function(req,res){
