@@ -32,9 +32,3 @@ gulp.task('test', function() {
 		.pipe(mocha({reporter: 'nyan'}))
 });
 
-gulp.task('test2', () =>
-      env({vars: {ENV:'Tests'}}),
-	gulp.src('tests/*.js', {read: false})
-		// `gulp-mocha` needs filepaths so you can't have any plugins before it
-		.pipe(mocha({reporter: 'nyan'}))
-);
