@@ -8,8 +8,8 @@ var should = require('should'),
     request = require('supertest'),
     app = ('../logTest.js'),
     mongoose = require("mongoose"),
-    Book = mongoose.model('Book')
-    //Book = require('../models/bookModel').Book;   // our 'book' record structure
+    //Book = mongoose.model('Book')
+    Book = require('../models/bookModel').Book;   // our 'book' record structure
 
 const agent = request.agent(app);
 
