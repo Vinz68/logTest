@@ -1,7 +1,7 @@
-var gulp = require('gulp');
-var nodemon = require('gulp-nodemon');
-var uglify = require('gulp-uglify');
-var gulpMocha = require('gulp-mocha');
+const gulp = require('gulp');
+const nodemon = require('gulp-nodemon');
+const uglify = require('gulp-uglify');
+const mocha = require('gulp-mocha');
 
 gulp.task('default', function() {
       nodemon({
@@ -26,5 +26,12 @@ gulp.task('compress', function() {
 
 gulp.task('test', function(){
       gulp.src('tests/*.js', {read: false})
-            .pipe(gulpMocha({reporter: 'nyan'}))
+            .pipe(mocha({reporter: 'nyan'}))
 });
+
+
+gulp.task('test2', () =>
+	gulp.src('tests/*.js', {read: false})
+		// `gulp-mocha` needs filepaths so you can't have any plugins before it
+		.pipe(mocha({reporter: 'nyan'}))
+);

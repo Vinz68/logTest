@@ -37,7 +37,7 @@ Not all of it will be implemented in the code; some aspects might need (free) th
 | gulp | Build-Tool, install it so it can run from command line |  |
 |  | It can copy and uglify/compress source files | sudo npm install gulp -g ||  | to the destination/production folder |  |
 |  | |  |
- | gulp-nodemon | Build-Tool, detect source file changes | sudo npm install gulp-nodemon --save-dev |
+| gulp-nodemon | Build-Tool, detect source file changes | npm install gulp-nodemon --save-dev |
 |  | |  |
 | [bunyan](https://github.com/trentm/node-bunyan) | Logging | npm install bunyan --save |
 |  | |  |
@@ -49,7 +49,7 @@ Not all of it will be implemented in the code; some aspects might need (free) th
 |  | |  |
 | body-parser | make json objects available in req.body | npm install body-parser --save |
 |  | |  |
-| mocha | unit testing framework. gulp-mocha is the gulp plugin of mocha, should = assertion framework, sinon = mocking framework | npm install gulp-mocha should sinon --save |
+| mocha | unit testing framework. gulp-mocha is the gulp plugin of mocha, should = assertion framework, sinon = mocking framework | npm install gulp-mocha should sinon --save-dev |
 |  | |  |
 
 
