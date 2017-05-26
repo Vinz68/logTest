@@ -22,9 +22,15 @@ describe('Book Crud Tests', function(){
             .send(bookPost)
             .expect(201)
             .end(function(err, res){
-                res.body.read.should.equal(false);
-                res.body.should.have.property('_id');
-                done()
+
+                if (err) 
+                    throw err;
+                else
+                {
+                    res.body.read.should.equal(false);
+                    res.body.should.have.property('_id');
+                    done()
+                }
             })
     })
 
