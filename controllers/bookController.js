@@ -1,7 +1,7 @@
 var bookController = function(Book){
 
     var post = function(req,res){
-        req.log.info({req: req}, "received post request");
+        //req.log.info({req: req}, "received post request");
 
         var book = new Book(req.body);
         book.save();
@@ -9,7 +9,7 @@ var bookController = function(Book){
         res.status(201).send(book);  // 201 = status created since new book has been created in the MongoDB
                                      // and in the body we return the newly created book
 
-        req.log.info({res: res}, "responded on post request");
+        //req.log.info({res: res}, "responded on post request");
     }
 
     var get = function(req,res){
