@@ -46,8 +46,6 @@ else{
     db = mongoose.connect('mongodb://localhost/bookAPI');
 }
 
-
- 
 var Book = require('./models/bookModel');   // our 'book' record structure
 
 app.use(bodyParser.urlencoded({extended:true}));
