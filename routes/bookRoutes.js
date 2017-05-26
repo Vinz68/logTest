@@ -11,7 +11,7 @@ var routes = function(Book){
 
     var bookRouter = express.Router();   // Setup a router for the /api/book REST API
 
-    var bookController = require('../controllers/bookController.js')(Book)
+    var bookController = require('../controllers/bookController')(Book);
 
     bookRouter.route('/')
         .post(bookController.post)
