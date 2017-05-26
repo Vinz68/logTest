@@ -14,12 +14,11 @@ var bookController = function(Book){
 
         if(!req.body.title){
             res.status(400);
-            res.send('Title is required.');
+            res.send('Title is required');
         }
         else
         {
             book.save();
-
             res.status(201);  // 201 = status created since new book has been created in the MongoDB
             res.send(book);   // and in the body we return the newly created book
         }
