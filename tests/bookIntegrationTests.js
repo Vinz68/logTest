@@ -11,7 +11,6 @@ var should = require('should'),
     mongoose = require("mongoose"),
     Book = mongoose.model('Book'),
     //Book = require('../models/bookModel');   // our 'book' record structure
-    agent = request.agent(app); 
 
 describe('Book Crud Tests', function(){
     it('Should allow a book to be posted and return a read and _id', function(done){
