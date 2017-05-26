@@ -1,3 +1,11 @@
+/* --------------------------------------------------------------------------------------------------
+   bookController.js - Create and Read 'Book' objects from/into a MongoDB Database, 
+   using POST and GET operations.
+   2017-05-26 Vincent van Beek
+----------------------------------------------------------------------------------------------------- */
+"use strict";
+
+
 var bookController = function(Book){
 
     var post = function(req,res){
@@ -6,8 +14,8 @@ var bookController = function(Book){
         var book = new Book(req.body);
         book.save();
 
-        res.status(201).send(book);  // 201 = status created since new book has been created in the MongoDB
-                                     // and in the body we return the newly created book
+        res.status(201);  // 201 = status created since new book has been created in the MongoDB
+        res.send(book);   // and in the body we return the newly created book
 
         //req.log.info({res: res}, "responded on post request");
     }

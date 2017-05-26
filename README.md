@@ -49,6 +49,9 @@ Not all of it will be implemented in the code; some aspects might need (free) th
 |  | |  |
 | body-parser | make json objects available in req.body | npm install body-parser --save |
 |  | |  |
+| mocha | unit testing framework. gulp-mocha is the gulp plugin of mocha, should = assertion framework, sinon = mocking framework | npm install gulp-mocha should sinon --save |
+|  | |  |
+
 
 
 ## Installation notes
@@ -77,7 +80,7 @@ node logTest.js
 
 7. open a web browser and test with:
 ```
-http://your-ip/api/books
+http://[your ip or domainname]:3000/api/books
 # see postman folder with GET, PUT, POST, DELETE and PATCH requests.
 ```
 
