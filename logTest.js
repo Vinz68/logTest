@@ -40,9 +40,12 @@ var log = bunyan.createLogger({
 // (but for testing, [depending on environment variable setting] we will use bookAPI_test database)
 var db;
 
-if (process.env.ENV == 'Test')
+if (process.env.ENV == 'Test'){
+    console.log('ENV=Test');
     db = mongoose.connect('mongodb://localhost/bookAPI_test');
+}
 else{
+    console.log('ENV!=Test');
     db = mongoose.connect('mongodb://localhost/bookAPI');
 }
 
