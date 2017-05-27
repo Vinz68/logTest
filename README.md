@@ -26,7 +26,8 @@ Best practises requirements, we want:
    - for automatic node restarts when source files are changes
   - compress/uglify source files to distribution folder 
 - **security**
-  - https
+
+- https
   - mechanism to start the app after boot (we will use [PM2](http://pm2.keymetrics.io/)) 
   - targets Unix/Linux (will be tested on Ubuntu and Raspbian PI )
 
@@ -59,18 +60,27 @@ Not all of it will be implemented in the code; some aspects might need (free) th
 
 ## Installation notes
 1. fork this package to your github account
+
+
 2. clone it from github to your server 
 ``` bash
 git clone https://github.com/[your-account-name-here]/logTest.git
 ```
+
+
 3. install its dependencies 
 ```
 npm install
 ```
 NOTE: Use npm install --only=production to install only dependencies, and not devDependencies,regardless of the value of the NODE_ENV environment variable.
 
+
 4. install mongoDB (see www.mongodb.org)
+
+
 5. add test data in the mongoDB database (see setupDB/README.md](https://github.com/Vinz68/logTest/blob/master/models/setupDB/))
+
+
 6. run the program
 ```
 gulp
@@ -90,10 +100,12 @@ pm2 start logTest.js
 http://[your ip or domainname]:3000/api/books
 ```
 
+
 8. test API using a tool like postman
 ```
 # see postman folder with GET, PUT, POST, DELETE and PATCH requests.
 ```
+
 
 9.execute the unit- and integration tests
 ```
