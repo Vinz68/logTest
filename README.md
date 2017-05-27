@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/Vinz68/logTest/master/images/logTestImg.png" width="250"></img> 
+img src="https://raw.githubusercontent.com/Vinz68/logTest/master/images/logTestImg.png" width="250"></img> 
 ## logTest 
 is a minimal NodeJS app which will serve as a quick-start (template) for my next NodeJS projects. It includes logging (bunyan) a database (mongoDB) and a REST Webservice API (express).
 
@@ -21,9 +21,10 @@ Best practises requirements, we want:
   - we need permanent storage in a database
   - using the API we can save & read data from it.
 - **use build tools** 
-  - for automatic node restarts when source files are changes
-  - compress/uglify source files to distribution folder
-  - automatic unit testing (todo)  
+  - unit testing (mocha, should, sinon)  
+  - integration testing (supertest)
+   - for automatic node restarts when source files are changes
+  - compress/uglify source files to distribution folder 
 - **security**
   - https
   - mechanism to start the app after boot (we will use [PM2](http://pm2.keymetrics.io/)) 
@@ -56,8 +57,6 @@ Not all of it will be implemented in the code; some aspects might need (free) th
 
 
 
-
-
 ## Installation notes
 1. fork this package to your github account
 2. clone it from github to your server 
@@ -80,14 +79,26 @@ or
 ```
 node logTest.js
 ```
+or use PM2 (auto start / auto restart)
+```
+pm2 start logTest.js
+```
 
 
 7. open a web browser and test with:
 ```
 http://[your ip or domainname]:3000/api/books
+```
+
+8. test API using a tool like postman
+```
 # see postman folder with GET, PUT, POST, DELETE and PATCH requests.
 ```
 
+9.execute the unit- and integration tests
+```
+gulp test
+```
 
 ## Contribute
 
@@ -96,12 +107,11 @@ Report a bug or a suggestion by posting an issue on the git repository (https://
 ![Alt text](images/logTestImg.png?raw=true "logTest")
 
 
-
  
 ## TODO List:
  - [ ] include code quality check (JSLint or something else..)     
  - [x] include deployment script (use grunt/gulp ?)
- - [ ] add one or more (test) modules
+ - [x] add one or more (test) modules
  - [ ] add choice of storage (MongoDB or Azure DocumentDB) 
  - [ ] add client which can consume the answer of the request(s) preferable a single page web-app (SPA; i think of an Angular2 app).
  - [ ] add client athentication using OAUTH2 
