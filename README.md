@@ -122,11 +122,9 @@ Report a bug or a suggestion by posting an issue on the git repository (https://
  
 ## TODO List:
  - [ ] include code quality check (JSLint or something else..)     
- - [x] include deployment script (use grunt/gulp ?)
- - [x] add one or more (test) modules
  - [ ] add choice of storage (MongoDB or Azure DocumentDB) 
  - [ ] add client which can consume the answer of the request(s) preferable a single page web-app (SPA; i think of an Angular2 app).
- - [ ] add client athentication using OAUTH2 
+ - [ ] add client authentication using OAUTH2 
 
 
 
