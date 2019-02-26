@@ -117,14 +117,14 @@ http://[your ip or domainname]:8088/api/books
 ```
 
 
-10.execute the unit- and integration tests
+10. execute the unit- and integration tests
 (note you need to install gulp, see above in the table)
 ```
 gulp test
 ```
 
 
-11.show log output from the logfile 
+11. show log output from the logfile 
 (note you need to install bunyan, see above in the table)
 ```
 cd logs
