@@ -105,21 +105,30 @@ pm2 start logTest.js
 ```
 
 
-7. open a web browser and test with:
+8. open a web browser and test with:
 ```
-http://[your ip or domainname]:3000/api/books
+http://[your ip or domainname]:8088/api/books
 ```
 
 
-8. test API using a tool like postman
+9. test API using a tool like postman
 ```
 # see postman folder with GET, PUT, POST, DELETE and PATCH requests.
 ```
 
 
-9.execute the unit- and integration tests
+10.execute the unit- and integration tests
+(note you need to install gulp, see above in the table)
 ```
 gulp test
+```
+
+
+11.show log output from the logfile 
+(note you need to install bunyan, see above in the table)
+```
+cd logs
+bunyan logTest.log 
 ```
 
 ## Contribute
