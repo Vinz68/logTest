@@ -36,9 +36,6 @@ function showTitle(flag) {
 // Also known as the jQuery .ready() handler
 $(function () {
 
-    var refreshMsg = "InfoDisplay started at: " + new Date().toLocaleString();
-    console.log(refreshMsg);
-	
 	var host = location.hostname;
 	var origin = location.origin;
 	var href = location.href;
@@ -49,7 +46,7 @@ $(function () {
     // First page title
     var title_info1 = "<h1 class='text-center'>" + origin + "</h1>";
     $(title_info1).appendTo("#title_info");
-    var title_info2 = "<h2 class='text-center'>is under construction...</h2>";
+    var title_info2 = "<h2 class='text-center'>is under construction !</h2>";
     $(title_info2).appendTo("#title_info");
 	
 	showTitle(true);

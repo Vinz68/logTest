@@ -4,8 +4,10 @@
    - using MongoDB as database
    - using express to build a REST Webservice API
    2017-05-03 Vincent van Beek
+   2019-02-26 Vincent van Beek - packages updated & DeprecationWarning on mongoose.open resolved
 ----------------------------------------------------------------------------------------------------- */
 "use strict";
+const path = require('path');               // The path module provides utilities for working with file and directory paths.
 var express = require("express");           // Express web application framework. http://expressjs.com/
 var mongoose = require("mongoose");         // Framework to access MongoDB (Database) using JSON syntax.
 var bodyParser = require("body-parser");    // Parse incoming request bodies in a middleware before your handlers, 
@@ -42,11 +44,17 @@ var db;
 
 if (process.env.ENV == 'Test'){
     console.log('ENV=Test');
-    db = mongoose.connect('mongodb://localhost/bookAPI_test');
+    // db = mongoose.connect('mongodb://localhost/bookAPI_test');
+    db = mongoose.connect('mongodb://localhost/bookAPI_test', {
+        useMongoClient: true,
+      });
 }
 else{
     console.log('ENV!=Test');
-    db = mongoose.connect('mongodb://localhost/bookAPI');
+    // db = mongoose.connect('mongodb://localhost/bookAPI');
+    db = mongoose.connect('mongodb://localhost/bookAPI', {
+        useMongoClient: true,
+      });
 }
 
 var Book = require('./models/bookModel');   // our 'book' record structure
@@ -70,9 +78,10 @@ app.use(function (req, res, next) {
 });
 
 
-// static link 'html' directory 
-app.use('/', express.static('/home/vincent/html'));       // use your own user / home directory here ! TODO: use ConfigFile for this.
-log.info('www-root linked to folder /home/vincent.html');
+// static link to the 'html' sub directory 
+var wwwroot = path.join(__dirname, 'html');
+app.use('/',express.static(wwwroot));
+log.info('www-root linked to: ' + wwwroot + '.');
 
 
 // REST WebService API for a 'Book'. 

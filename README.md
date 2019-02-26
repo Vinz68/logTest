@@ -68,20 +68,30 @@ git clone https://github.com/[your-account-name-here]/logTest.git
 ```
 
 
-3. install its dependencies 
+3. install node and npm when needed.   ( find [here](https://github.com/nodesource/distributions) how to install node)
+   
+   test first if you have node already installed. Let it show its version number
+
+```
+node --version
+```
+
+
+
+4. install its dependencies 
 ```
 npm install
 ```
 NOTE: Use npm install --only=production to install only dependencies, and not devDependencies,regardless of the value of the NODE_ENV environment variable.
 
 
-4. install mongoDB (see www.mongodb.org)
+5. install mongoDB   ([link](www.mongodb.org))
 
 
-5. add test data in the mongoDB database (see setupDB/README.md](https://github.com/Vinz68/logTest/blob/master/models/setupDB/))
+6. add test data in the mongoDB database (see [setupDB/README.md](https://github.com/Vinz68/logTest/blob/master/models/setupDB/))
 
 
-6. run the program
+7. run the program
 ```
 gulp
 ```
