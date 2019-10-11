@@ -62,9 +62,9 @@ Not all of it will be implemented in the code; some aspects might need (free) th
 1. fork this package to your github account
 
 
-2. clone it from github to your server 
+2. clone it from github to your local folder 
 ``` bash
-git clone https://github.com/[your-account-name-here]/logTest.git
+git clone https://github.com/Vinz68/logTest.git
 ```
 
 
