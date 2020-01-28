@@ -7,7 +7,7 @@
     "body-parser": "^1.17.1",
     "bunyan": "^1.8.12",
     "express": "^4.14.0",
-    "mongoose": "^4.8.6",
+    "mongoose": "^5.7.5",
     "request": "^2.81.0",
     "uuid-v4": "^0.1.0"
   },
