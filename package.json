@@ -6,17 +6,17 @@
   "dependencies": {
     "body-parser": "^1.17.1",
     "bunyan": "^1.8.12",
-    "express": "^4.14.0",
-    "mongoose": "^5.7.5",
-    "request": "^2.81.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.7",
+    "request": "^2.88.2",
     "uuid-v4": "^0.1.0"
   },
   "devDependencies": {
-    "gulp": "^4.0.0",
+    "gulp": "^4.0.2",
     "gulp-env": "^0.4.0",
     "gulp-mocha": "^6.0.0",
-    "gulp-nodemon": "^2.2.1",
-    "gulp-uglify": "^3.0.0",
+    "gulp-nodemon": "^2.5.0",
+    "gulp-uglify": "^3.0.2",
     "should": "^11.2.1",
     "sinon": "^2.3.1",
     "supertest": "^3.0.0"
