@@ -10,7 +10,7 @@
 const path = require('path');               // The path module provides utilities for working with file and directory paths.
 var express = require("express");           // Express web application framework. http://expressjs.com/
 var mongoose = require("mongoose");         // Framework to access MongoDB (Database) using JSON syntax.
-var bodyParser = require("body-parser");    // Parse incoming request bodies in a middleware before your handlers, 
+var bodyParser = require("body-parser");    // Parse incoming request bodies in a middleware before your handlers,
                                             // available under the req.body property. See https://github.com/expressjs/body-parser
 
 var APPNAME = "logTest";                    // Name of this app used here and there
@@ -29,7 +29,7 @@ var log = bunyan.createLogger({
         type: "rotating-file",              // Log files will "roll" over (automatic deletion after configured period)
         path: "./logs/logTest.log",         // Path and filename of the log file
         period: "1d",                       // daily rotation
-        count: 30                           // keep 31 copies / files (~1 month)
+        count: 31                           // keep 31 copies / files (~1 month)
     }],
     serializers: {                          // usage of default serializers:
         req: bunyan.stdSerializers.req,     // Bunyan's HTTP server request serializer with a suggested set of keys.
@@ -46,14 +46,18 @@ if (process.env.ENV == 'Test'){
     console.log('ENV=Test');
     // db = mongoose.connect('mongodb://localhost/bookAPI_test');
     db = mongoose.connect('mongodb://localhost/bookAPI_test', {
-        useMongoClient: true,
+        //useMongoClient: true,
+	 useNewUrlParser: true,
+         useUnifiedTopology: true,
       });
 }
 else{
     console.log('ENV!=Test');
     // db = mongoose.connect('mongodb://localhost/bookAPI');
     db = mongoose.connect('mongodb://localhost/bookAPI', {
-        useMongoClient: true,
+        //useMongoClient: true,
+	 useNewUrlParser: true,
+	 useUnifiedTopology: true,
       });
 }
 
