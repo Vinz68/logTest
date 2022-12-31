@@ -6,7 +6,7 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "bunyan": "^1.8.14",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "mongoose": "^5.10.2",
     "request": "^2.88.2",
     "uuid-v4": "^0.1.0"
