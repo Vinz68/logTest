@@ -45,7 +45,7 @@ Not all of it will be implemented in the code; some aspects might need (free) th
 |  | |  |
 | express | REST API | npm install express --save |
 |  | |  |
-| mongoDB | Storage | www.mongodb.org (download & install) |
+| [mongoDB](https://www.mongodb.com/try/download/community) | Storage | download & install community edition |
 |  | |  |
 | mongoose | Storage framework / using JSON to access the mongoDB | npm install mongoose --save |
 |  | |  |
@@ -59,16 +59,14 @@ Not all of it will be implemented in the code; some aspects might need (free) th
 
 
 ## Installation notes
-1. fork this package to your github account
-
-
-2. clone it from github to your local folder 
+1. clone repo from github to your local folder 
+   (or fork it to your github account)
 ``` bash
-git clone https://github.com/[your-account-name-here]/logTest.git
+git clone https://github.com/Vinz68/logTest.git
 ```
 
 
-3. install node and npm when needed.   ( find [here](https://github.com/nodesource/distributions) how to install node)
+2. install node and npm when needed.   ( find [here](https://nodejs.org/en/download) how to install node)
    
    test first if you have node already installed. Let it show its version number
 
@@ -77,18 +75,17 @@ node --version
 ```
 
 
-
-4. install its dependencies 
+3. install its dependencies 
 ```
 npm install
 ```
 NOTE: Use npm install --only=production to install only dependencies, and not devDependencies,regardless of the value of the NODE_ENV environment variable.
 
 
-5. install mongoDB   ([link](www.mongodb.org))
+5. install MongoDB Community Edition ([link](https://www.mongodb.com/try/download/community))
 
 
-6. add test data in the mongoDB database (see [setupDB/README.md](https://github.com/Vinz68/logTest/blob/master/models/setupDB/))
+6. insert test data in the MongoDB database (see [setupDB/README.md](https://github.com/Vinz68/logTest/blob/master/models/setupDB/README.md))
 
 
 7. run the program

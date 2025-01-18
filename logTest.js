@@ -38,14 +38,14 @@ var log = bunyan.createLogger({
 });
 
 
-// Connect with database 'bookAPI' on MongoDB and use local database named: 'bookAPI'
-// (but for testing, [depending on environment variable setting] we will use bookAPI_test database)
+// Connect with local MongoDB on database 'bookAPI' 
+// (but for testing, [depending on environment variable setting] we will use remote MongoDB on server and database bookAPI_test)
 var db;
 
 if (process.env.ENV == 'Test'){
     console.log('ENV=Test');
-    // db = mongoose.connect('mongodb://localhost/bookAPI_test');
-    db = mongoose.connect('mongodb://localhost/bookAPI_test', {
+    // db = mongoose.connect('mongodb://192.168.1.108/bookAPI_test');
+    db = mongoose.connect('mongodb://192.168.1.108/bookAPI_test', {
         //useMongoClient: true,
 	 useNewUrlParser: true,
          useUnifiedTopology: true,
@@ -100,6 +100,8 @@ app.use('/api/books', bookRouter);
 app.listen(PORT, function () {
     log.info(APPNAME + " is ready and listening on port: " + PORT);
     console.log(APPNAME + " is ready and listening on port: " + PORT);
+    console.log();
+    console.log("Use this endpoint to query for books: http://localhost:8088/api/books");
 });
 
 

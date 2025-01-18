@@ -1,4 +1,4 @@
-db.books.insert([
+db.books.insertMany([
 {
 	title: 'War and Peace',
 	genre: 'Historical Fiction',

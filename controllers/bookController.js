@@ -62,6 +62,27 @@ var bookController = function(Book){
 
 module.exports = bookController;
 
+// Before
+app.get('/getUsers', (req, res) => {
+    UserModel.find({}, (err, result) => {
+        if (err) {
+            res.json(err)
+        } else {
+            res.json(result)
+        }
+    })
+})
+
+// After
+app.get('/getUsers', async (req, res) => {
+    try {
+        const result = await UserModel.find({})
+        res.json(result)
+    } catch (err) {
+        res.json(err)
+    }
+})
+
 
 
 
