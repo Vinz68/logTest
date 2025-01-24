@@ -27,9 +27,10 @@ Best practises requirements, we want:
   - compress/uglify source files to distribution folder 
 - **security**
 
-- https
+- optional (on Ubuntu and Raspbian PI)
   - mechanism to start the app after boot (we will use [PM2](http://pm2.keymetrics.io/)) 
-  - targets Unix/Linux (will be tested on Ubuntu and Raspbian PI )
+
+Targets Unix/Linux (will be tested on Ubuntu and Raspbian PI ), but tested on Windows 11 as well succesfully
 
 
 Not all of it will be implemented in the code; some aspects might need (free) third party tools and/or configuration settings.
