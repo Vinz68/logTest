@@ -42,25 +42,29 @@ var db;
 
 if (process.env.ENV == 'Test'){
     console.log('ENV=Test');
-    // db = mongoose.connect('mongodb://192.168.1.108/bookAPI_test');
+
     db = mongoose.connect('mongodb://192.168.1.108:27017/bookAPI_test')
         .then(()=>{
-            log.info('DB connection successful.');
+            log.info(`DB connection successful.`);
+            console.log(`MongoDB connection successful.`);
         })
         .catch((err)=>{
-            log.info(`DB connection error:${err}`);          
+            log.info(`DB connection error:${err}`);      
+            console.log(`MongoDB connection error:${err}`);                
         });
 }
 else{
     console.log('ENV!=Test');
     // db = mongoose.connect('mongodb://localhost/bookAPI');
     db = mongoose.connect('mongodb://localhost/bookAPI')
-        .then(()=>{
-            log.info('DB connection successful.');
-        })
-        .catch((err)=>{
-            log.info(`DB connection error:${err}`);          
-        });
+    .then(()=>{
+        log.info(`DB connection successful.`);
+        console.log(`MongoDB connection successful.`);
+    })
+    .catch((err)=>{
+        log.info(`DB connection error:${err}`);      
+        console.log(`MongoDB connection error:${err}`);               
+    });
 }
 
 var Book = require('./models/bookModel');   // our 'book' record structure
