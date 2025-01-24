@@ -1,7 +1,6 @@
 /* --------------------------------------------------------------------------------------------------
    bookRoutes.js - Create, Read, Update and Delete 'Book' objects from/into a MongoDB Database, 
    using POST,PUT, GET, PATCH and DELETE operations.
-   2017-05-26 Vincent van Beek
 ----------------------------------------------------------------------------------------------------- */
 "use strict";
 

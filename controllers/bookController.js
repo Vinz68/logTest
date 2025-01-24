@@ -1,7 +1,6 @@
 /* --------------------------------------------------------------------------------------------------
    bookController.js - Create and Read 'Book' objects from/into a MongoDB Database, 
    using POST and GET operations.
-   2017-05-26 Vincent van Beek
 ----------------------------------------------------------------------------------------------------- */
 "use strict";
 
@@ -31,25 +30,21 @@ var bookController = function(Book){
 
         var query = req.query;
 
-        Book.find(query, function(err,books){
-            if(err) {
-                req.log.error("/api/books/ : Something went wrong. Error:", err);
-                res.status(500).send(err);
-                req.log.info({res: res}, "responded on get request with an error");
-            }
-            else
-            {
-                var returnBooks = [];
-                books.forEach(function(element, index, array){
-                    var newBook = element.toJSON();
-                    newBook.links= {};
-                    newBook.links.self = 'http://' + req.headers.host + '/api/books/' + newBook._id
-                    returnBooks.push(newBook);
-                });
-                res.json(returnBooks);
+        Book.find(query).then(books => {
+            var returnBooks = [];
+            books.forEach(function(element){
+                var newBook = element.toJSON();
+                newBook.links= {};
+                newBook.links.self = 'http://' + req.headers.host + '/api/books/' + newBook._id
+                returnBooks.push(newBook);
+            });
+            res.json(returnBooks);
 
-                req.log.info({res: res}, "responded on get request");
-            }
+            req.log.info({res: res}, "responded on get request");
+        }).catch(err => {
+            req.log.error("/api/books/ : Something went wrong. Error:", err);
+            res.status(500).send(err);
+            req.log.info({res: res}, "responded on get request with an error");
         });
     }
 
@@ -62,26 +57,7 @@ var bookController = function(Book){
 
 module.exports = bookController;
 
-// Before
-app.get('/getUsers', (req, res) => {
-    UserModel.find({}, (err, result) => {
-        if (err) {
-            res.json(err)
-        } else {
-            res.json(result)
-        }
-    })
-})
 
-// After
-app.get('/getUsers', async (req, res) => {
-    try {
-        const result = await UserModel.find({})
-        res.json(result)
-    } catch (err) {
-        res.json(err)
-    }
-})
 
 
 

@@ -3,8 +3,6 @@
    - using bunyan as logging framework 
    - using MongoDB as database
    - using express to build a REST Webservice API
-   2017-05-03 Vincent van Beek
-   2019-02-26 Vincent van Beek - packages updated & DeprecationWarning on mongoose.open resolved
 ----------------------------------------------------------------------------------------------------- */
 "use strict";
 const path = require('path');               // The path module provides utilities for working with file and directory paths.
@@ -39,26 +37,30 @@ var log = bunyan.createLogger({
 
 
 // Connect with local MongoDB on database 'bookAPI' 
-// (but for testing, [depending on environment variable setting] we will use remote MongoDB on server and database bookAPI_test)
+// (but on Test Environment we will use a remote MongoDB on server and database bookAPI_test)
 var db;
 
 if (process.env.ENV == 'Test'){
     console.log('ENV=Test');
     // db = mongoose.connect('mongodb://192.168.1.108/bookAPI_test');
-    db = mongoose.connect('mongodb://192.168.1.108/bookAPI_test', {
-        //useMongoClient: true,
-	 useNewUrlParser: true,
-         useUnifiedTopology: true,
-      });
+    db = mongoose.connect('mongodb://192.168.1.108:27017/bookAPI_test')
+        .then(()=>{
+            log.info('DB connection successful.');
+        })
+        .catch((err)=>{
+            log.info(`DB connection error:${err}`);          
+        });
 }
 else{
     console.log('ENV!=Test');
     // db = mongoose.connect('mongodb://localhost/bookAPI');
-    db = mongoose.connect('mongodb://localhost/bookAPI', {
-        //useMongoClient: true,
-	 useNewUrlParser: true,
-	 useUnifiedTopology: true,
-      });
+    db = mongoose.connect('mongodb://localhost/bookAPI')
+        .then(()=>{
+            log.info('DB connection successful.');
+        })
+        .catch((err)=>{
+            log.info(`DB connection error:${err}`);          
+        });
 }
 
 var Book = require('./models/bookModel');   // our 'book' record structure
