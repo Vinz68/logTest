@@ -1,6 +1,6 @@
 /* --------------------------------------------------------------------------------------------------
    logTest - logging example.
-   - using bunyan as logging framework 
+   - using bunyan as logging framework
    - using MongoDB as database
    - using express to build a REST Webservice API
 ----------------------------------------------------------------------------------------------------- */
@@ -49,8 +49,8 @@ if (process.env.ENV == 'Test'){
             console.log(`MongoDB connection successful.`);
         })
         .catch((err)=>{
-            log.info(`DB connection error:${err}`);      
-            console.log(`MongoDB connection error:${err}`);                
+            log.info(`DB connection error:${err}`);
+            console.log(`MongoDB connection error:${err}`);
         });
 }
 else{
@@ -62,8 +62,8 @@ else{
         console.log(`MongoDB connection successful.`);
     })
     .catch((err)=>{
-        log.info(`DB connection error:${err}`);      
-        console.log(`MongoDB connection error:${err}`);               
+        log.info(`DB connection error:${err}`);
+        console.log(`MongoDB connection error:${err}`);
     });
 }
 
@@ -88,13 +88,13 @@ app.use(function (req, res, next) {
 });
 
 
-// static link to the 'html' sub directory 
+// static link to the 'html' sub directory
 var wwwroot = path.join(__dirname, 'html');
 app.use('/',express.static(wwwroot));
 log.info('www-root linked to: ' + wwwroot + '.');
 
 
-// REST WebService API for a 'Book'. 
+// REST WebService API for a 'Book'.
 // Using this API a book can be created, read, updated and deleted (CRUD) from the database.
 // 'domain-name/api/books' ia the end point for "books"
 var bookRouter = require('./routes/bookRoutes')(Book);
