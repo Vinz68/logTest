@@ -15,7 +15,7 @@
     "gulp": "^5.0.0",
     "gulp-env": "^0.4.0",
     "gulp-mocha": "^10.0.1",
-    "gulp-nodemon": "^2.2.1",
+    "gulp-nodemon": "^2.5.0",
     "gulp-uglify": "^3.0.2",
     "should": "^13.2.3",
     "sinon": "^9.0.3",
